@@ -1,0 +1,63 @@
+A template for making this project
+
+
+answer = choice(list_of_fruits)
+life = 5
+chosen_letters = []
+game_over = False
+
+#Task 2, 3, 4, 5
+def display_blanks():
+  """
+  This function will be called over and over again to display the correctly-guessed letters. Letters not guessed correctly will be displayed with an underscore symbol.
+  """
+  #Task 3 - define empty string for display_txt
+  display_txt = ""
+  
+  #Task 4 - loop through each letter of the answer and add the correct letters or underscore
+  for letter in answer:
+    if letter in chosen_letters:
+      display_txt += letter + " "
+    else:
+      display_txt += "_ "
+  
+  #Task 5 - return the complete display_txt
+  return display_txt + "\n"
+  
+#print the blank spaces based on the length of
+#the answer when the game starts  
+print("_ " * len(answer))
+
+#Task 6 - while...loop condition and define variables
+#Task 10 - End the game once game is over
+while life > 0 and game_over == False:
+  print("Life:", life)
+  input_letter = input("Please enter a letter: ")
+  #Task 7
+  #Check if the input_letter has been entered before.
+  #If so, display the list of letters entered and the blanks
+  if input_letter in chosen_letters:
+    print("You have entered these letter before: " + str(chosen_letters) + "\n")
+    #print(output_text)
+  elif input_letter in answer: #check if input_letter is in answer
+    #append input_letter into chosen_letters here
+    chosen_letters.append(input_letter)
+    #define output_text here
+    output_text = display_blanks()
+    
+    #Task 8
+    if "_" in output_text:
+      #print output_text here
+      print(output_text)
+    else:
+      game_over = True
+  else:
+    #Task 9
+    #Minus one value from a variable here
+    life -= 1
+    #append input_letter into chosen_letters here
+    chosen_letters.append(input_letter) 
+    print(display_blanks())
+
+print("Game over!")
+print("Answer:", answer)
