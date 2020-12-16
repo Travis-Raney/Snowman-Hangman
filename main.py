@@ -9,7 +9,7 @@ def clear():
 #variables
 guess_count = 7
 Instr=("Type one of the letters from each of the hidden words each round.\n\n\n\n")
-wordlist = ('deckthehalls', 'joy', 'christmasspirit', 'christmasdecoration', 'ornaments', 'christmastablecloth', 'santa', 'thanksgiving', 'tablecloth', 'thanksgivingfoods', 'turkey', 'cranberry', 'potatosalad', 'summerholidays')
+wordlist = ('deck the halls', 'joy', 'christmas spirit', 'christmas decoration', 'ornaments', 'christmas tablecloth', 'santa', 'thanksgiving', 'tablecloth', 'thanksgiving foods', 'turkey', 'cranberry', 'potato salad', 'summer holidays')
 answer = random.choice(wordlist)
 life = 7
 chosen_letters = []
