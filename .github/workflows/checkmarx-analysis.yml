@@ -7,8 +7,8 @@ name: CxFlow
 on:
   push:
     branches: [ main ]
-  pull_request: default
-    branches:
+  pull_request: actions/checkoutv@2.2.1
+    branches: [ main ] 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel - this job is specifically configured to use the Checkmarx CxFlow Action
 jobs:pull request
