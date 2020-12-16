@@ -17,3 +17,5 @@
         npm install
         npm run build --if-present
         npm test
+name: Upload a Build Artifact
+  uses: actions/upload-artifact@v2.2.1
